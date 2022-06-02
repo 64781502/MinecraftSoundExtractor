@@ -55,7 +55,7 @@
             this.ExtractButton.TabIndex = 1;
             this.ExtractButton.Text = "Extract";
             this.ExtractButton.UseVisualStyleBackColor = true;
-            this.ExtractButton.Click += new System.EventHandler(this.button1_Click);
+            this.ExtractButton.Click += new System.EventHandler(this.ExtractButton_Click);
             // 
             // textBox1
             // 

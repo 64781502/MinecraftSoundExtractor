@@ -16,7 +16,7 @@ namespace minecraftsoundextractor
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void ExtractButton_Click(object sender, EventArgs e)
         {
             string[] files = Directory.GetFiles(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\.minecraft\assets\indexes", "*.json", SearchOption.AllDirectories);
             string[] item = files.OrderByDescending(a => a).ToArray();
@@ -66,7 +66,7 @@ namespace minecraftsoundextractor
             }
         }
 
-        Point lastPoint;
+        private Point lastPoint;
         private void Form_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -76,11 +76,7 @@ namespace minecraftsoundextractor
             }
         }
 
-        private void Form_MouseDown(object sender, MouseEventArgs e)
-        {
-            lastPoint = new Point(e.X, e.Y);
-        }
-
+        private void Form_MouseDown(object sender, MouseEventArgs e) { lastPoint = new Point(e.X, e.Y); }
         private void RadioDesktop_CheckedChanged(object sender, EventArgs e) { custompath.Text = Environment.GetFolderPath(Environment.SpecialFolder.Desktop); }
         private void RadioDownl_CheckedChanged(object sender, EventArgs e) { custompath.Text = @"C:\Users\" + Environment.UserName + @"\Downloads"; }
         private void GUIForm_Load(object sender, EventArgs e) { custompath.Text = Environment.GetFolderPath(Environment.SpecialFolder.Desktop); }
