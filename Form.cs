@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Data;
+using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Media;
 using System.Windows.Forms;
 using Newtonsoft.Json.Linq;
 
@@ -35,7 +37,7 @@ namespace minecraftsoundextractor
                     ext = ".wav";
                 }
 
-                File.Copy(dir, Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\" + hash.ToString() + ext);
+                File.Copy(dir, custompath.Text + @"\" + hash.ToString() + ext);
             }
             else if (!File.ReadAllText(item[0]).Contains(textBox1.Text))
             {
@@ -50,5 +52,37 @@ namespace minecraftsoundextractor
                 MessageBox.Show("Minecraft folder doesn't exist in AppData.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void RadioCustom_CheckedChanged(object sender, EventArgs e)
+        {
+            if (RadioCustom.Checked)
+            {
+                FolderBrowserDialog folderDlg = new FolderBrowserDialog { ShowNewFolderButton = true };
+                DialogResult result = folderDlg.ShowDialog();
+                if (result == DialogResult.OK)
+                {
+                    custompath.Text = folderDlg.SelectedPath;
+                }
+            }
+        }
+
+        Point lastPoint;
+        private void Form_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                Left += e.X - lastPoint.X;
+                Top += e.Y - lastPoint.Y;
+            }
+        }
+
+        private void Form_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastPoint = new Point(e.X, e.Y);
+        }
+
+        private void RadioDesktop_CheckedChanged(object sender, EventArgs e) { custompath.Text = Environment.GetFolderPath(Environment.SpecialFolder.Desktop); }
+        private void RadioDownl_CheckedChanged(object sender, EventArgs e) { custompath.Text = @"C:\Users\" + Environment.UserName + @"\Downloads"; }
+        private void GUIForm_Load(object sender, EventArgs e) { custompath.Text = Environment.GetFolderPath(Environment.SpecialFolder.Desktop); }
     }
 }
