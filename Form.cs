@@ -38,6 +38,7 @@ namespace minecraftsoundextractor
                 }
 
                 File.Copy(dir, custompath.Text + @"\" + hash.ToString() + ext);
+                MessageBox.Show("Sound extracted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.None);
             }
             else if (!File.ReadAllText(item[0]).Contains(textBox1.Text))
             {
