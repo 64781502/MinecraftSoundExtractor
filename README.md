@@ -8,3 +8,7 @@
 - original java minecraft
 - .NET 5
 - Newtonsoft.Json
+
+### TODO:
+- sound player
+- fix json error
