@@ -8,7 +8,6 @@
 - original java minecraft
 - .NET 5
 - Newtonsoft.Json
-- WMPLib
 
 ### TODO:
 - sound player
