@@ -11,4 +11,4 @@
 
 ### TODO:
 - sound player
-- fix json error
+- ~~fix json error~~
