@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUIForm));
             this.ExtractButton = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.IDBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.RadioMp3 = new System.Windows.Forms.RadioButton();
             this.RadioWav = new System.Windows.Forms.RadioButton();
@@ -57,15 +57,15 @@
             this.ExtractButton.UseVisualStyleBackColor = true;
             this.ExtractButton.Click += new System.EventHandler(this.ExtractButton_Click);
             // 
-            // textBox1
+            // IDBox
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox1.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.textBox1.Location = new System.Drawing.Point(26, 63);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(427, 22);
-            this.textBox1.TabIndex = 0;
+            this.IDBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.IDBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.IDBox.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.IDBox.Location = new System.Drawing.Point(26, 63);
+            this.IDBox.Name = "IDBox";
+            this.IDBox.Size = new System.Drawing.Size(427, 22);
+            this.IDBox.TabIndex = 0;
             // 
             // label1
             // 
@@ -210,7 +210,7 @@
             this.Controls.Add(this.RadioWav);
             this.Controls.Add(this.RadioMp3);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.IDBox);
             this.Controls.Add(this.ExtractButton);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -228,7 +228,7 @@
 
         #endregion
         private System.Windows.Forms.Button ExtractButton;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox IDBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RadioButton RadioOgg;
         private System.Windows.Forms.RadioButton RadioWav;
