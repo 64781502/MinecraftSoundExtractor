@@ -43,6 +43,7 @@
             this.custompath = new System.Windows.Forms.Label();
             this.RadioDesktop = new System.Windows.Forms.RadioButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.PlayBox = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,7 +74,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.Location = new System.Drawing.Point(21, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 16);
+            this.label1.Size = new System.Drawing.Size(58, 16);
             this.label1.TabIndex = 2;
             this.label1.Text = "Enter ID:";
             // 
@@ -83,7 +84,7 @@
             this.RadioMp3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RadioMp3.Location = new System.Drawing.Point(210, 146);
             this.RadioMp3.Name = "RadioMp3";
-            this.RadioMp3.Size = new System.Drawing.Size(51, 20);
+            this.RadioMp3.Size = new System.Drawing.Size(52, 20);
             this.RadioMp3.TabIndex = 0;
             this.RadioMp3.Text = "mp3";
             this.RadioMp3.UseVisualStyleBackColor = true;
@@ -94,7 +95,7 @@
             this.RadioWav.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.RadioWav.Location = new System.Drawing.Point(380, 146);
             this.RadioWav.Name = "RadioWav";
-            this.RadioWav.Size = new System.Drawing.Size(49, 20);
+            this.RadioWav.Size = new System.Drawing.Size(50, 20);
             this.RadioWav.TabIndex = 1;
             this.RadioWav.Text = "wav";
             this.RadioWav.UseVisualStyleBackColor = true;
@@ -107,7 +108,7 @@
             this.RadioOgg.Location = new System.Drawing.Point(26, 146);
             this.RadioOgg.Name = "RadioOgg";
             this.RadioOgg.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.RadioOgg.Size = new System.Drawing.Size(148, 20);
+            this.RadioOgg.Size = new System.Drawing.Size(149, 20);
             this.RadioOgg.TabIndex = 2;
             this.RadioOgg.TabStop = true;
             this.RadioOgg.Text = "ogg (recommended)";
@@ -119,7 +120,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(23, 115);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 16);
+            this.label2.Size = new System.Drawing.Size(68, 16);
             this.label2.TabIndex = 3;
             this.label2.Text = "extension:";
             // 
@@ -129,7 +130,7 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(23, 191);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(104, 16);
+            this.label3.Size = new System.Drawing.Size(105, 16);
             this.label3.TabIndex = 4;
             this.label3.Text = "extract directory:";
             // 
@@ -139,7 +140,7 @@
             this.RadioCustom.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.RadioCustom.Location = new System.Drawing.Point(376, 3);
             this.RadioCustom.Name = "RadioCustom";
-            this.RadioCustom.Size = new System.Drawing.Size(68, 20);
+            this.RadioCustom.Size = new System.Drawing.Size(69, 20);
             this.RadioCustom.TabIndex = 6;
             this.RadioCustom.Text = "custom";
             this.RadioCustom.UseVisualStyleBackColor = true;
@@ -151,7 +152,7 @@
             this.RadioDownl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RadioDownl.Location = new System.Drawing.Point(206, 3);
             this.RadioDownl.Name = "RadioDownl";
-            this.RadioDownl.Size = new System.Drawing.Size(91, 20);
+            this.RadioDownl.Size = new System.Drawing.Size(92, 20);
             this.RadioDownl.TabIndex = 5;
             this.RadioDownl.Text = "downloads";
             this.RadioDownl.UseVisualStyleBackColor = true;
@@ -179,7 +180,7 @@
             this.RadioDesktop.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.RadioDesktop.Location = new System.Drawing.Point(22, 3);
             this.RadioDesktop.Name = "RadioDesktop";
-            this.RadioDesktop.Size = new System.Drawing.Size(74, 20);
+            this.RadioDesktop.Size = new System.Drawing.Size(75, 20);
             this.RadioDesktop.TabIndex = 7;
             this.RadioDesktop.TabStop = true;
             this.RadioDesktop.Text = "desktop";
@@ -196,12 +197,24 @@
             this.panel1.Size = new System.Drawing.Size(453, 27);
             this.panel1.TabIndex = 9;
             // 
+            // PlayBox
+            // 
+            this.PlayBox.AutoSize = true;
+            this.PlayBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.PlayBox.Location = new System.Drawing.Point(130, 299);
+            this.PlayBox.Name = "PlayBox";
+            this.PlayBox.Size = new System.Drawing.Size(54, 20);
+            this.PlayBox.TabIndex = 10;
+            this.PlayBox.Text = "Play";
+            this.PlayBox.UseVisualStyleBackColor = true;
+            // 
             // GUIForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(480, 334);
+            this.Controls.Add(this.PlayBox);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.custompath);
             this.Controls.Add(this.label3);
@@ -241,6 +254,7 @@
         private System.Windows.Forms.Label custompath;
         private System.Windows.Forms.RadioButton RadioDesktop;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.CheckBox PlayBox;
     }
 }
 

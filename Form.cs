@@ -5,6 +5,9 @@ using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using Newtonsoft.Json.Linq;
+using System.Diagnostics;
+using System.Media;
+using System.Threading;
 
 namespace minecraftsoundextractor
 {
@@ -41,9 +44,36 @@ namespace minecraftsoundextractor
 
                 try
                 {
+                    if (PlayBox.Checked)
+                    {
+                        File.Copy(dir, Path.GetTempPath() + "temp.ogg");
+                        Process.Start("cmd.exe", "/c ffmpeg -i " + Path.GetTempPath() + "temp.ogg " + Path.GetTempPath() + "play.wav");
+                        Thread.Sleep(200);
+                        new SoundPlayer(Path.GetTempPath() + "play.wav").Play();
+                    }
+                }
+                catch (IOException) //stupid
+                {
+                    File.Delete(Path.GetTempPath() + "temp.ogg");
+                    File.Delete(Path.GetTempPath() + "play.wav");
+                    File.Copy(dir, Path.GetTempPath() + "temp.ogg");
+                    Process.Start("cmd.exe", "/c ffmpeg -i " + Path.GetTempPath() + "temp.ogg " + Path.GetTempPath() + "play.wav");
+                    Thread.Sleep(200);
+                    new SoundPlayer(Path.GetTempPath() + "play.wav").Play();
+
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Unknown error.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                try
+                {
                     string name = IDBox.Text.Substring(from, ogg - from);
                     File.Copy(dir, custompath.Text + @"\" + name.Replace("/", ".") + ext);
                     MessageBox.Show("Sound extracted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.None);
+                    File.Delete(Path.GetTempPath() + "temp.ogg");
+                    File.Delete(Path.GetTempPath() + "play.wav");
                 }
                 catch (ArgumentOutOfRangeException)
                 {
