@@ -85,7 +85,7 @@
             this.RadioMp3.Location = new System.Drawing.Point(210, 146);
             this.RadioMp3.Name = "RadioMp3";
             this.RadioMp3.Size = new System.Drawing.Size(52, 20);
-            this.RadioMp3.TabIndex = 0;
+            this.RadioMp3.TabIndex = 4;
             this.RadioMp3.Text = "mp3";
             this.RadioMp3.UseVisualStyleBackColor = true;
             // 
@@ -96,7 +96,7 @@
             this.RadioWav.Location = new System.Drawing.Point(380, 146);
             this.RadioWav.Name = "RadioWav";
             this.RadioWav.Size = new System.Drawing.Size(50, 20);
-            this.RadioWav.TabIndex = 1;
+            this.RadioWav.TabIndex = 5;
             this.RadioWav.Text = "wav";
             this.RadioWav.UseVisualStyleBackColor = true;
             // 
@@ -109,7 +109,7 @@
             this.RadioOgg.Name = "RadioOgg";
             this.RadioOgg.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.RadioOgg.Size = new System.Drawing.Size(149, 20);
-            this.RadioOgg.TabIndex = 2;
+            this.RadioOgg.TabIndex = 3;
             this.RadioOgg.TabStop = true;
             this.RadioOgg.Text = "ogg (recommended)";
             this.RadioOgg.UseVisualStyleBackColor = true;
@@ -204,7 +204,7 @@
             this.PlayBox.Location = new System.Drawing.Point(130, 299);
             this.PlayBox.Name = "PlayBox";
             this.PlayBox.Size = new System.Drawing.Size(54, 20);
-            this.PlayBox.TabIndex = 10;
+            this.PlayBox.TabIndex = 2;
             this.PlayBox.Text = "Play";
             this.PlayBox.UseVisualStyleBackColor = true;
             // 

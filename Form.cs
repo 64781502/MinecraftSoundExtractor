@@ -46,10 +46,19 @@ namespace minecraftsoundextractor
                 {
                     if (PlayBox.Checked)
                     {
-                        File.Copy(dir, Path.GetTempPath() + "temp.ogg");
-                        Process.Start("cmd.exe", "/c ffmpeg -i " + Path.GetTempPath() + "temp.ogg " + Path.GetTempPath() + "play.wav");
-                        Thread.Sleep(200);
-                        new SoundPlayer(Path.GetTempPath() + "play.wav").Play();
+                        string[] path = Environment.GetEnvironmentVariable("PATH").Split(';');
+
+                        if (!string.Join(" ", path).Contains("ffmpeg"))
+                        {
+                            MessageBox.Show("Ffmpeg not installed.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        else
+                        {
+                            File.Copy(dir, Path.GetTempPath() + "temp.ogg");
+                            Process.Start("cmd.exe", "/c ffmpeg -i " + Path.GetTempPath() + "temp.ogg " + Path.GetTempPath() + "play.wav");
+                            Thread.Sleep(200);
+                            new SoundPlayer(Path.GetTempPath() + "play.wav").Play();
+                        }
                     }
                 }
                 catch (IOException) //stupid
