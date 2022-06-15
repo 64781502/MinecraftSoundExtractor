@@ -8,7 +8,8 @@
 - original java minecraft
 - .NET 5
 - Newtonsoft.Json
+- ffmpeg (for play button)
 
 ### TODO:
-- sound player
+- ~~sound player~~
 - ~~fix json error~~
